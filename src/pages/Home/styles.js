@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `
 export const Container = styled.aside`
     background-color: ${(props) => props.theme.colors.background};
-    width: 360px;
+    width: 25%;
     height: 100vh;
     overflow-y: auto;
 `
@@ -39,7 +39,7 @@ export const Button = styled.a`
 `
 export const Map = styled.div`
     background-color: ${(props) => props.theme.colors.primary};
-    width: 1024px;
+    width: 75%;
 `
 export const Carousel = styled(Slider)`
     .slick-slide{

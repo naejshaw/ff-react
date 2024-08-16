@@ -7,7 +7,7 @@ import {Button, Carousel, CarouselTitle, Container, Input, InputContainer, Map, 
 
 export default function Home(){
     const [inputValue, setinputValue] = useState('')
-    const [modalOpened, setModalOpened] = useState(true)
+    const [modalOpened, setModalOpened] = useState(false)
 
     const settings = {
         autoplay: true,
