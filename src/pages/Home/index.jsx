@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 import logo from '../../assets/logo.svg'
 import restaurant from '../../assets/restaurante-fake.png'
-import { Card, Modal, RestaurantCard } from '../../components'
-import {Button, Carousel, CarouselTitle, Container, Input, InputContainer, Map, Search, Wrapper} from './styles'
+import { Card, Map, Modal, RestaurantCard } from '../../components'
+import {Button, Carousel, CarouselTitle, Container, Input, InputContainer, Search, Wrapper} from './styles'
 
 export default function Home(){
     const [inputValue, setinputValue] = useState('')
