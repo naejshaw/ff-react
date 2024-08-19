@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react'
-import Portal from './Portal'
+import Portal from './Portal/index.tsx'
 
 import {Dialog, Overlay} from './styles.js';
 
-const Modal = ({children, open, onClose}) => {
+interface IModal{children?:any, open:boolean, onClose:()=>void}
+
+const Modal = ({children, open, onClose}:IModal) => {
     useEffect(() => {
         function onEsc(e){
             if(e.keyCode === 27) onClose()

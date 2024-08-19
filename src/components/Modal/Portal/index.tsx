@@ -1,6 +1,10 @@
 import ReactDOM from 'react-dom'
 
-export default function PortalModal ({children}){
+interface IPortal{
+    children?: any
+}
+
+export default function PortalModal ({children}:IPortal){
     const portal = document.getElementById('modal-root')
     return ReactDOM.createPortal(children, portal)
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 
 const Card = styled.div`
@@ -20,9 +20,20 @@ const Title = styled.span`
 `
 
 export default function ImageCard({photo, title}){
+    const [imageLoaded, setImageLoaded] = useState(false);
+    useEffect(() => {
+        const imageLoader = new Image();
+        imageLoader.src = photo;
+        imageLoader.onload = () => setImageLoaded(true);
+    }, [photo]);
+
     return (
-        <Card photo={photo}>
-            <Title>{title}</Title>    
-        </Card>
+        <>
+        {imageLoaded && (
+            <Card photo={photo}>
+                <Title>{title}</Title>
+            </Card>
+        ) }
+        </>
     )
 }
